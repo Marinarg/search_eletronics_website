@@ -31,11 +31,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
   height: 100%;
 }
 
@@ -43,4 +39,10 @@ body {
   background: #1dbac2;
   height: 100vh;
 }
+
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),   url(./fonts/Montserrat/Montserrat-Bold.ttf) format("truetype");}
+
 </style>
