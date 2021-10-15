@@ -4,9 +4,9 @@
       <img src="../assets/logo.png" style="height: 100px; width: 200px">
     </div>
     <div class="search" style="display: flex; flex-direction: row; align-items: center">
-      <NInput v-model="search" class="searchTerm" placeholder="Digite sua busca" style="height: 45px; width: 410px; border-radius: 25px; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none">
+      <NInput v-model="search" class="searchTerm" placeholder="Digite sua busca" style="height: 45px; width: 410px; border-radius: 25px; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none" @input="handleInput">
       </NInput>
-      <n-button @click="()=>onClick(search)" class="searchButton" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 45px; background-color: #1dbac2; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none">
+      <n-button @click="$emit('click')" class="searchButton" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 45px; background-color: #1dbac2; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none">
         <img src="../assets/magnifying_glass.png" style="height: 40px; width: 40px; margin-left: 15px; --border: none; --border-hover: none">
       </n-button>
     </div>
@@ -18,20 +18,30 @@
 import { NButton, NInput } from 'naive-ui'
 
 export default {
-  name: 'Home',
+  name: 'Home', 
+  
   props: {
+    value: String,
     page: String,
     onClick: {type: Function, required: true}
   },
+
   data(){
     return {
-      search: '',
+      search: this.value
     }
   },
+
   components: {
       NButton,
       NInput
+  },
+
+  methods: {
+    handleInput(val){
+      this.$emit('update:value', val)
     }
+  }
 }
 </script>
 

@@ -21,12 +21,12 @@
 						PRODUTOS ENCONTRADOS
 					</span>
 				</n-button>
-				<n-button class="analysis1-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 65px; width: 220px; margin-right:30px; background-color: #EFB6C2; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#EFB6C2; --ripple-duration:0s; border-radius: 13px">
+				<n-button @click="$emit('click')" class="analysis1-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 65px; width: 220px; margin-right:30px; background-color: #EFB6C2; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#EFB6C2; --ripple-duration:0s; border-radius: 13px">
 					<span class="analysis1-button-text">
 						ANÁLISE 1
 					</span>
 				</n-button>
-				<n-button class="analysis2-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 65px; width: 220px; margin-right:30px; background-color: #EFB6C2; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#EFB6C2; --ripple-duration:0s; border-radius: 13px">
+				<n-button @click="$emit('click')" class="analysis2-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 65px; width: 220px; margin-right:30px; background-color: #EFB6C2; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#EFB6C2; --ripple-duration:0s; border-radius: 13px">
 					<span class="analysis2-button-text">
 						ANÁLISE 2
 					</span>
@@ -51,20 +51,25 @@
 import { NButton, NInput } from 'naive-ui'
 
 export default {
-  name: 'Results',
+  name: 'Analysis1',
   props: {
     page: String,
     onClick: {type: Function, required: true}
   },
   data(){
     return {
-      search: '',
+      search: this.value,
     }
   },
   components: {
       NButton,
       NInput
-    }
+    },
+  methods: {
+		handleInput(val){
+			this.$emit('update:value', val)
+		}
+	}
 }
 </script>
 
