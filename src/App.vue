@@ -1,5 +1,8 @@
 <template>
   <div style="height:100%; width:100%">
+    <div v-if="isLoading" style="position: absolute; height: 100vh; width: 100vw; top: 0; left: 0; opacity: 0.6; background-color: white; z-index: 99; display: flex; align-items: center; justify-content: center;">
+      <n-spin size="large" />
+    </div>
     <Home :value="search" v-if="page=='home'" @click="onClick" @update:value="search=$event"/>
     <Results :value="search" v-if="page=='results'" @click="onClick" @update:value="search=$event" :results="results"/>
   </div>
@@ -8,43 +11,42 @@
 <script>
 import Home from './components/Home.vue'
 import Results from './components/Results.vue'
-// import Analysis1 from './components/Analysis1.vue'
 import axios from 'axios'
+import { NSpin } from 'naive-ui'
 
 export default {
   name: 'App',
   components: {
     Home,
-    Results
+    Results,
+    NSpin
   },
   data() {
     return {
       page: "home",
       results: {},
-      search: ''
+      search: '',
+      isLoading: false
     }
   },
   methods: {
     async onClick(){
-      const baseURI = 'http://127.0.0.1:8000/' + this.search
-      
+      const baseURI = 'http://127.0.0.1:8000/'
+      const uniqueId = localStorage.getItem('sessionId')
+
+      this.isLoading = true
       this.page = 'results'
 
       try{
-        const response = await axios.get(baseURI)
+        const response = await axios.get(baseURI + this.search)
+        await axios.post(baseURI, {uniqueId, search: this.search})
         console.log(response)
         this.results = response.data
-    } catch(error) {console.error(error)}
-    },
-    async onClickAnalysis1(){
-      const baseURI = 'http://127.0.0.1:8000/' + this.search
-
-      this.page = 'anakysis1'
-
-      try{
-        const {data} = await axios.get(baseURI)
-      this.results = data
-    } catch(error) {console.error(error)}
+        this.isLoading = false
+    } catch(error) {
+      console.error(error)
+      this.isLoading = false
+    }
     }
   }
 }
