@@ -48,7 +48,7 @@
 									</div>
 								</td>
 								<td class="product-shipping">
-									<div style="display: flex; flex-direction: column; align-items: center; margin-right: 54px;">
+									<div v-if="value.shipping_info" style="display: flex; flex-direction: column; align-items: center; margin-right: 54px;">
 										<span class="product-shipping-head">
 												Frete
 										</span>
