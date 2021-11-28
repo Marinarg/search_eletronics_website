@@ -66,7 +66,7 @@
 
 								</td>
 								<td class="product-in-stock">
-									<div v-if="!value.in_stock" style="margin-right: 54px">
+									<div v-if="value.in_stock" style="margin-right: 54px">
 										<span class="product-name-text">
 											Disponível em estoque
 										</span>
@@ -88,111 +88,6 @@
 								</td>
 							</tr>
 						</template>
-
-
-
-
-<!-- 
-						<tr class="odd-row" data-index=1 style="background-color: white;">
-							<td class="product-name">
-								<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 54px">
-									<span class="product-name-text" >
-										Nome produto | Site1
-									</span>
-									<img src="../assets/red_led.png" style="height: 100px; width: 100px;">
-								</div>
-							</td>
-							<td class="product-shipping">
-								<div style="display: flex; flex-direction: column; align-items: center; margin-right: 54px;">
-									<div class="product-shipping-text-and-value" style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 30px">
-										<span class="product-shipping-text">
-											Frete.
-										</span>
-										<span class="product-shipping-vaue">
-											R$ 0,00.
-										</span>
-									</div>
-									<span class="product-shipping-info">
-										*Valor referente à localização da UFSC.
-									</span>
-								</div>
-
-							</td>
-							<td class="product-price">
-								<div style="display: flex; flex-direction: column;align-items: flex-start; margin-right: 54px;">
-									<span class="product-price-text">
-										Preço
-									</span>
-									<span class="product-price-value">
-										R$ 0,00
-									</span>
-								</div>
-							</td>
-							<td class="product-in-stock">
-								<div style="margin-right: 54px">
-									<span class="product-name-text">
-										Disponível em estoque
-									</span>
-								</div>
-							</td>
-							<td class="go-to-site">
-								<n-button class="go-to-site-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 80px; margin-right:25px; background-color: #FF607D; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#FF607D; --ripple-duration:0s; border-radius: 13px">
-									<span class="go-to-site-button-text">
-										Ir ao site
-									</span>
-								</n-button>
-							</td>
-						</tr>
-						<tr class="even-row" data-index=2 style="background-color: white;">
-							<td class="product-name">
-								<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 54px">
-									<span class="product-name-text" >
-										Nome produto | Site1
-									</span>
-									<img src="../assets/red_led.png" style="height: 100px; width: 100px;">
-								</div>
-							</td>
-							<td class="product-shipping">
-								<div style="display: flex; flex-direction: column; align-items: center; margin-right: 54px;">
-									<div class="product-shipping-text-and-value" style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 30px">
-										<span class="product-shipping-text">
-											
-										</span>
-										<span class="product-shipping-vaue">
-											
-										</span>
-									</div>
-									<span class="product-shipping-info">
-										
-									</span>
-								</div>
-
-							</td>
-							<td class="product-price">
-								<div style="display: flex; flex-direction: column;align-items: flex-start; margin-right: 54px;">
-									<span class="product-price-text">
-										Preço
-									</span>
-									<span class="product-price-value">
-										R$ 0,00
-									</span>
-								</div>
-							</td>
-							<td class="product-not-in-stock">
-								<div style="margin-right: 54px">
-									<span class="product-name-text">
-										Indisponível
-									</span>
-								</div>
-							</td>
-							<td class="go-to-site">
-								<n-button class="go-to-site-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 80px; margin-right:25px; background-color: #FF607D; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#FF607D; --ripple-duration:0s; border-radius: 13px">
-									<span class="go-to-site-button-text">
-										Ir ao site
-									</span>
-								</n-button>
-							</td>						
-						</tr>	 -->
 					</tbody>
 				</table>
 			</div>
