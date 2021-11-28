@@ -5,7 +5,7 @@
 				<div class="logo">
 					<img src="../assets/logo.png" style="height: 50px; width: 100px">
 				</div>
-				<div class="search" style="display: flex; flex-direction: row; align-items: center; margin-top: 1%; margin-left: 25%">
+				<div class="search" style="display: flex; flex-direction: row; align-items: center; margin-top: 1%; margin-left: 50%">
 					<NInput v-on:keypress.enter="$emit('click')" v-model="search" class="searchTerm" placeholder="Digite uma nova busca" style="height: 40px; width: 700px; border-radius: 25px; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none" @input="handleInput">
 					</NInput>
 					<n-button @click="$emit('click')" class="search-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 45px; background-color: #1dbac2; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#1dbac2; --ripple-duration:0s">
