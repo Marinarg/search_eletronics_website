@@ -1,0 +1,12 @@
+[Unit]
+Description=Search eletronics Website
+After=network.target website.service
+
+[Service]
+User=admin
+Group=admin
+Environment=PATH=/usr/bin:/usr/local/bin:/bin
+ExecStart=/bin/bash /home/admin/search_eletronics_website/.deploy/lauch_script.sh
+
+[Install]
+WantedBy=multi-user.target
