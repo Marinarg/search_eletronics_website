@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     async onClick(){
-      const baseURI = 'http://127.0.0.1:8000/'
+      const baseURI = 'http://172.31.32.132:8000/'
       const uniqueId = localStorage.getItem('sessionId')
 
       this.isLoading = true
