@@ -1,1 +1,0 @@
-cd /home/admin/search_eletronics_website && npm run serve
