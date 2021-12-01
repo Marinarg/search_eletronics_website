@@ -1,1 +1,1 @@
-cd /home/admin/search_eletronics_website && npm run serve -- --port 80
+cd /home/admin/search_eletronics_website && npm run serve
