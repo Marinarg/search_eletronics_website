@@ -48,20 +48,22 @@
 									</div>
 								</td>
 								<td class="product-shipping">
-									<div v-if="value.shipping_info" style="display: flex; flex-direction: column; align-items: center; margin-right: 54px;">
-										<span class="product-shipping-head">
-												Frete
-										</span>
-										<div class="product-shipping-text-and-value" style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 30px">
-											<template v-for="(v, i) in value.shipping_info" v-bind:key="i">
-												<span class="product-shipping-types">
-													{{v.deadline}}: {{v.price}}
-												</span>
-											</template>
+									<div v-if="value.in_stock === 'True'">
+										<div v-if="value.shipping_info" style="display: flex; flex-direction: column; align-items: center; margin-right: 54px;">
+											<span class="product-shipping-head">
+													Frete
+											</span>
+											<div class="product-shipping-text-and-value" style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 30px">
+												<template v-for="(v, i) in value.shipping_info" v-bind:key="i">
+													<span class="product-shipping-types">
+														{{v.deadline}}: {{v.price}}
+													</span>
+												</template>
+											</div>
+											<span class="product-shipping-info">
+												*Valor referente à localização da UFSC.
+											</span>
 										</div>
-										<span class="product-shipping-info">
-											*Valor referente à localização da UFSC.
-										</span>
 									</div>
 
 								</td>
