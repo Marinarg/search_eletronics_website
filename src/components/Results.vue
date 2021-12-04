@@ -14,7 +14,7 @@
 				</div>
 			</div>
 		</div>
-		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 5%;">
+		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 1%;">
 			<div class="qtt-products-found" style="font-size: 15px; color:#716c6c">
 				<span class="products-button-text">
 					{{Object.keys(results).length}} produtos encontrados
