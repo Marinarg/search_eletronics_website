@@ -66,7 +66,7 @@
 
 								</td>
 								<td class="product-in-stock">
-									<div v-if="value.in_stock" style="margin-right: 54px">
+									<div v-if="value.in_stock = True" style="margin-right: 54px">
 										<span class="product-name-text">
 											Disponível em estoque
 										</span>
