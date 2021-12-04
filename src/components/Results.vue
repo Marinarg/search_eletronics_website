@@ -19,7 +19,7 @@
 					<span class="products-button-text">
 						{{search}}
 					</span>
-					<div class="qtt-products-found" style="font-size: 15px>
+					<div class="qtt-products-found" style="font-size: 15px">
 						<span class="products-button-text">
 							{{Object.keys(results).length}} produtos encontrados
 						</span>
