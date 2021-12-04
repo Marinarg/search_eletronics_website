@@ -17,7 +17,7 @@
 		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 5%;">
 			<div class="main-boxes" style="display: flex; flex-direction: row; align-items: center; background-color:#eaeaea;">
 					<span class="products-button-text">
-						{{results.length}} PRODUTOS ENCONTRADOS
+						{{Object.keys(results).length}} PRODUTOS ENCONTRADOS
 					</span>
 			</div>
 			<div class="main-table" style="display: flex; flex-direction: column; align-items: center; background-color:#eaeaea">
