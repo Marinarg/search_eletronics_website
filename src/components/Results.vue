@@ -16,8 +16,11 @@
 		</div>
 		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 5%;">
 			<div class="main-boxes" style="display: flex; flex-direction: row; align-items: center; background-color:#eaeaea;">
-					<span class="products-button-text">
-						{{Object.keys(results).length}} PRODUTOS ENCONTRADOS
+					<span class="products-button-text" style="font-size: 20px">
+						{{search}}
+					</span>
+					<span class="products-button-text" style="font-size: 15px">
+						{{Object.keys(results).length}} produtos encontrados
 					</span>
 			</div>
 			<div class="main-table" style="display: flex; flex-direction: column; align-items: center; background-color:#eaeaea">
