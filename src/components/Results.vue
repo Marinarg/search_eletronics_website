@@ -38,7 +38,7 @@
 									</div>
 								</td>
 								<td class="product-price">
-									<div v-if="value.in_stock" style="display: flex; flex-direction: column;align-items: flex-start; margin-right: 54px;">
+									<div v-if="value.in_stock = 'True'" style="display: flex; flex-direction: column;align-items: flex-start; margin-right: 54px;">
 										<span class="product-price-text">
 											Preço
 										</span>
@@ -66,7 +66,7 @@
 
 								</td>
 								<td class="product-in-stock">
-									<div v-if="value.in_stock = True" style="margin-right: 54px">
+									<div v-if="value.in_stock = 'True'" style="margin-right: 54px">
 										<span class="product-name-text">
 											Disponível em estoque
 										</span>
