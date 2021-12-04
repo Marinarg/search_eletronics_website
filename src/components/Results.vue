@@ -17,7 +17,7 @@
 		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 2%;">
 			<div class="qtt-products-found" style="font-size: 15px; color:#716c6c">
 				<span class="products-button-text">
-					{{search}}{{Object.keys(results).length}} produtos encontrados
+					{{search}} - {{Object.keys(results).length}} produtos encontrados
 				</span>
 			</div>
 			<div class="main-table" style="display: flex; flex-direction: column; align-items: center; background-color:#eaeaea">
