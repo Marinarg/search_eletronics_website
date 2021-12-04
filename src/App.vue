@@ -54,7 +54,6 @@ export default {
 
 <style>
 #app {
-  text-align: center;
   height: 100%;
 }
 
