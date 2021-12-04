@@ -15,7 +15,7 @@
 			</div>
 		</div>
 		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 2%;">
-			<div class="qtt-products-found" style="font-size: 17px; color:#716c6c">
+			<div class="qtt-products-found" style="font-size: 15px; color:#716c6c">
 				<span class="products-button-text">
 					{{value}} - {{Object.keys(results).length}} produtos encontrados
 				</span>
@@ -180,15 +180,15 @@ export default {
 }
 
 .product-price{
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .product-shipping{
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .product-shipping-text-and-value{
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .product-shipping-head{
@@ -197,17 +197,17 @@ export default {
 }
 
 .product-shipping-info{
-    font-size: 10px;
+    font-size: 8px;
     color: #494949;
     width: 105px;
 }
  
 .product-in-stock{
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .product-not-in-stock{
-    font-size: 12px;
+    font-size: 10px;
     color: #FC0619;
 }
 
