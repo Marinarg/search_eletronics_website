@@ -15,13 +15,15 @@
 			</div>
 		</div>
 		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 5%;">
-			<div class="main-boxes" style="display: flex; flex-direction: row; align-items: center; background-color:#eaeaea;">
-					<span class="products-button-text" style="font-size: 20px">
+			<div class="main-info" style="display: flex; flex-direction: row; background-color:#eaeaea;">
+					<span class="products-button-text">
 						{{search}}
 					</span>
-					<span class="products-button-text" style="font-size: 15px">
-						{{Object.keys(results).length}} produtos encontrados
-					</span>
+					<div class="qtt-products-found" style="font-size: 15px>
+						<span class="products-button-text">
+							{{Object.keys(results).length}} produtos encontrados
+						</span>
+					</div>
 			</div>
 			<div class="main-table" style="display: flex; flex-direction: column; align-items: center; background-color:#eaeaea">
 				<table class="results" cellspacing="5px" style="border-collapse: separate; border-spacing: 0 20px">
@@ -131,7 +133,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 .wrap{
@@ -140,8 +141,8 @@ export default {
     background-color: #eaeaea;
 }
 
-.main-boxes{
-    font-size: 14px;
+.main-info{
+    font-size: 20px;
     &:hover{
        color: red !important;
     }
