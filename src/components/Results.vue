@@ -15,17 +15,10 @@
 			</div>
 		</div>
 		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 5%;">
-			<div style="width: 100%">
-				<div class="search-text" style="font-size: 25px">
-					<span class="">
-						{{search}}
-					</span>
-				</div>
-				<div class="qtt-products-found" style="font-size: 15px; color:#716c6c">
-					<span class="products-button-text">
-						{{Object.keys(results).length}} produtos encontrados
-					</span>
-				</div>
+			<div class="qtt-products-found" style="font-size: 15px; color:#716c6c">
+				<span class="products-button-text">
+					{{Object.keys(results).length}} produtos encontrados
+				</span>
 			</div>
 			<div class="main-table" style="display: flex; flex-direction: column; align-items: center; background-color:#eaeaea">
 				<table class="results" cellspacing="5px" style="border-collapse: separate; border-spacing: 0 20px">
