@@ -4,7 +4,7 @@
       <n-spin size="large" />
     </div>
     <Home :value="search" v-if="page=='home'" @click="onClick" @update:value="search=$event"/>
-    <Results :value="search" v-if="page=='results'" @click="onClick" @update:value="search=$event" :results="results"/>
+    <Results :value="search" :current-search="currentSearch" v-if="page=='results'" @click="onClick" @update:value="search=$event" :results="results"/>
   </div>
 </template>
 
@@ -26,6 +26,7 @@ export default {
       page: "home",
       results: {},
       search: '',
+      currentSearch:'',
       isLoading: false
     }
   },
@@ -36,6 +37,8 @@ export default {
 
       this.isLoading = true
       this.page = 'results'
+      console.log(this.search)
+      this.currentSearch = this.search
 
       try{
         const response = await axios.get(baseURI + this.search)
