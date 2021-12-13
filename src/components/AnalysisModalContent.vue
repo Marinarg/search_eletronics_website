@@ -1,6 +1,11 @@
 <template>
 	<n-card>
-		{{JSON.stringify(item)}}
+		<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 0px; padding: 1rem">
+			<span class="product-name-text" >
+				{{item.product_name}} | {{item.website_domain}}
+			</span>
+			<img :src="item.product_image" style="height: 100px; width: 100px;">
+		</div>
 	</n-card>
 </template>
 <script>
