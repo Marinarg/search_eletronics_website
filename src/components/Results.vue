@@ -93,14 +93,16 @@
 				</table>
 			</div>
 		</div>
-		<analysis-modal :showModal="showModal" @update:showModal="showModal=$event" :item="selectedItem"/>
+		<n-modal v-model:show="showModal">
+			<analysis-modal-content :item="selectedItem"/>
+		</n-modal>
 	</div>
 </template>
 
 <script>
 
-import { NButton, NInput } from 'naive-ui'
-import AnalysisModal from './AnalysisModal'
+import { NButton, NInput, NModal } from 'naive-ui'
+import AnalysisModalContent from './AnalysisModalContent'
 
 export default {
 	name: 'Results',
@@ -124,7 +126,8 @@ export default {
 	components: {
 		NButton,
 		NInput,
-		AnalysisModal
+		NModal,
+		AnalysisModalContent
 	},
 
 	methods: {
