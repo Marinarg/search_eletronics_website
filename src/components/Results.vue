@@ -26,7 +26,7 @@
 					</thead>
 					<tbody>
 						<template v-for="(value, index) in results" v-bind:key="index">
-							<tr class="odd-row" data-index=1 style="background-color: white">
+							<tr class="odd-row" data-index=1 style="background-color: white" @click="selectItem(value)">
 								<td class="product-name">
 									<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 0px; padding: 1rem">
 										<span class="product-name-text" >
@@ -92,12 +92,14 @@
 				</table>
 			</div>
 		</div>
+		<analysis-modal showModal="showModal" @update:showModal="showModal=$event" item="selectedItem"/>
 	</div>
 </template>
 
 <script>
 
 import { NButton, NInput } from 'naive-ui'
+import AnalysisModal from './AnalysisModal'
 
 export default {
 	name: 'Results',
@@ -113,17 +115,24 @@ export default {
 	data(){
 	return {
 		search: this.value,
+		selectedItem: null,
+		showModal: false,
 	}
 	},
   
 	components: {
 		NButton,
-		NInput
+		NInput,
+		AnalysisModal
 	},
 
 	methods: {
 		handleInput(val){
 			this.$emit('update:value', val)
+		},
+		selectItem(item){
+			this.selectedItem = item
+			this.showModal = true
 		}
 	}
 }
