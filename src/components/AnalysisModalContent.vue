@@ -1,5 +1,5 @@
 <template>
-	<n-card>
+	<n-card style="width:600px; height:400px;">
 		<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 0px; padding: 1rem">
 			<span class="product-name-text" >
 				{{item.product_name}} | {{item.website_domain}}
