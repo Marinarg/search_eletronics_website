@@ -1,5 +1,5 @@
 <template>
-	<n-modal v-model:show="showModal">
+	<n-modal v-model:show="showModal" @close="(value)=>$emit('update:showModal', value)">
 		<n-card>
 			{{JSON.stringify(item)}}
 		</n-card>
