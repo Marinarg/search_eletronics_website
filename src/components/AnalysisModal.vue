@@ -1,6 +1,6 @@
 <template>
 	<n-modal v-model:show="showModal" @close="(value)=>$emit('update:showModal', value)" 
-		@keyup.escape="$emit('update:showModal', false)">
+		@keyup.esc="$emit('update:showModal', false)">
 		<n-card>
 			{{JSON.stringify(item)}}
 		</n-card>
