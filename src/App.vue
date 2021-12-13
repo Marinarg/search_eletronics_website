@@ -37,13 +37,11 @@ export default {
 
       this.isLoading = true
       this.page = 'results'
-      console.log(this.search)
       this.currentSearch = this.search
 
       try{
         const response = await axios.get(baseURI + this.search)
         await axios.post(baseURI, {uniqueId, search: this.search})
-        console.log(response)
         this.results = response.data
         this.isLoading = false
     } catch(error) {
