@@ -26,7 +26,8 @@
 					</thead>
 					<tbody>
 						<template v-for="(value, index) in results" v-bind:key="index">
-							<tr class="odd-row" data-index=1 style="background-color: white; cursor: pointer" @click="()=>selectItem(value)">
+							<tr class="odd-row" data-index=1 style="background-color: white; cursor: pointer" 
+							@click="()=>selectItem(value)">
 								<td class="product-name">
 									<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 0px; padding: 1rem">
 										<span class="product-name-text" >
@@ -92,7 +93,7 @@
 				</table>
 			</div>
 		</div>
-		<analysis-modal showModal="showModal" @update:showModal="showModal=$event" item="selectedItem"/>
+		<analysis-modal :showModal="showModal" @update:showModal="showModal=$event" :item="selectedItem"/>
 	</div>
 </template>
 
