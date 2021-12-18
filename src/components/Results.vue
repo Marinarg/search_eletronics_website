@@ -94,7 +94,7 @@
 			</div>
 		</div>
 		<n-modal v-model:show="showModal">
-			<analysis-modal-content :item="selectedItem"/>
+			<analysis-modal-content :results_recommendations="results_recommendations"/>
 		</n-modal>
 	</div>
 </template>
