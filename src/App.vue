@@ -5,6 +5,7 @@
     </div>
     <Home :value="search" v-if="page=='home'" @click="onClick" @update:value="search=$event"/>
     <Results :value="search" :current-search="currentSearch" v-if="page=='results'" @click="onClick" @update:value="search=$event" :results="results"/>
+    <AnalysisModalContent :value="search" v-if="page=='AnalysisModalContent'" @click="onClick" @update:value="search=$event" :results_recommendations="results_recommendations"/>
   </div>
 </template>
 
