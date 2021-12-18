@@ -41,9 +41,10 @@ export default {
 
       try{
         const response = await axios.get(baseURI + this.search)
-        const response = await axios.get(baseURI + this.search + '/recommendations')
+        const response_recommendations = await axios.get(baseURI + this.search + '/recommendations')
         await axios.post(baseURI, {uniqueId, search: this.search})
         this.results = response.data
+        this.results_recommendations = response_recommendations.data
         this.isLoading = false
     } catch(error) {
       console.error(error)
