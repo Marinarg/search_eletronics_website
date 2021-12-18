@@ -120,6 +120,7 @@ export default {
 		search: this.value,
 		selectedItem: null,
 		showModal: false,
+		results_recommendations: null
 	}
 	},
   
@@ -134,7 +135,11 @@ export default {
 		handleInput(val){
 			this.$emit('update:value', val)
 		},
-		selectItem(item){
+		async selectItem(item){
+			const baseURI = 'http://3.20.168.53:8000/'
+
+        	const {data} = await axios.get(baseURI + this.search + '/recommendations')
+	        this.results_recommendations = data
 			this.selectedItem = item
 			this.showModal = true
 		}

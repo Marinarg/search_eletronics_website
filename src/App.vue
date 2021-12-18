@@ -5,14 +5,12 @@
     </div>
     <Home :value="search" v-if="page=='home'" @click="onClick" @update:value="search=$event"/>
     <Results :value="search" :current-search="currentSearch" v-if="page=='results'" @click="onClick" @update:value="search=$event" :results="results"/>
-    <AnalysisModalContent :value="search" v-if="page=='AnalysisModalContent'" @click="onClick" @update:value="search=$event" :results_recommendations="results_recommendations"/>
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
 import Results from './components/Results.vue'
-import AnalysisModalContent from './components/AnalysisModalContent.vue'
 import axios from 'axios'
 import { NSpin } from 'naive-ui'
 
@@ -43,10 +41,8 @@ export default {
 
       try{
         const response = await axios.get(baseURI + this.search)
-        const response_recommendations = await axios.get(baseURI + this.search + '/recommendations')
         await axios.post(baseURI, {uniqueId, search: this.search})
         this.results = response.data
-        this.results_recommendations = response_recommendations.data
         this.isLoading = false
     } catch(error) {
       console.error(error)
