@@ -100,9 +100,9 @@
 </template>
 
 <script>
-
 import { NButton, NInput, NModal } from 'naive-ui'
 import AnalysisModalContent from './AnalysisModalContent'
+import axios from 'axios'
 
 export default {
 	name: 'Results',
