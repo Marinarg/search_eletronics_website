@@ -12,6 +12,7 @@
 <script>
 import Home from './components/Home.vue'
 import Results from './components/Results.vue'
+import AnalysisModalContent from './components/AnalysisModalContent.vue'
 import axios from 'axios'
 import { NSpin } from 'naive-ui'
 
