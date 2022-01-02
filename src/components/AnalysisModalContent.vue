@@ -2,9 +2,7 @@
 	<n-card style="width:600px; height:400px;">
 		<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 0px; padding: 1rem">
 			<span class="recommendations" >
-				Você pode se interessar por:
-				{{search}}
-				{{results_recommendations}}
+				Recomendações: {{results_recommendations}}
 			</span>
 		</div>
 	</n-card>
