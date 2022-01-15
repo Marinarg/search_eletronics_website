@@ -4,7 +4,7 @@
 			<table class="recommendations">
 					<thead class="tableHeader">
 						<span>
-							<strong>Pessoas que buscaram esse produto também se interessaram por:</strong>
+							<strong>Pessoas que buscaram {{currentSearch}} também se interessaram por:</strong>
 						</span>
 					</thead>
 					<tbody>
@@ -33,6 +33,7 @@ export default {
 		page: String,
 		onClick: {type: Function, required: true},
 		results_recommendations: undefined,
+		currentSearch: String,
 	},
   
 	data(){
