@@ -21,7 +21,7 @@
 				</span>
 				<n-button class="products-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 220px; background-color: #FF607D; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#FF607D; --ripple-duration:0s; border-radius: 13px; --color-pressed: #0000; cursor: pointer" 
 							@click="()=>selectItem(value)">
-					<span class="products-button-text", style="font-size: 10px">
+					<span class="products-button-text" style="font-size: 10px">
 						produtos relacionados
 					</span>
 				</n-button>
