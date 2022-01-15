@@ -2,7 +2,7 @@
 	<n-card style="width:600px; height:400px;">
 		<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 0px; padding: 1rem">
 			<table class="recommendations">
-					<thead class="tableHeader">
+					<thead class="tableHeader" style="margin-bottom: 5px">
 						<span>
 							<strong>Pessoas que buscaram esse produto também se interessaram por:</strong>
 						</span>
