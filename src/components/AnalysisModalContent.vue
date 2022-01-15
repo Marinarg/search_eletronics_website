@@ -4,18 +4,16 @@
 			<table class="recommendations">
 					<thead class="tableHeader">
 						<span>
-							Pessoas que buscaram esse produto também se interessaram por:
+							<strong>Pessoas que buscaram esse produto também se interessaram por:</strong>
 						</span>
 					</thead>
 					<tbody>
 						<template v-for="value in results_recommendations">
-							<tr class="row" data-index=1 style="background-color: white">
+							<tr class="row">
 								<td class="item-name">
-									<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 0px; padding: 1rem">
-										<span class="product-name-text" >
-											{{value}}
-										</span>
-									</div>
+									<span class="product-name-text" >
+										- {{value}}
+									</span>
 								</td>
 							</tr>
 						</template>
