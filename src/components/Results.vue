@@ -19,9 +19,10 @@
 				<span class="products-button-text">
 					{{currentSearch}} - {{Object.keys(results).length}} produtos encontrados
 				</span>
-				<n-button class="products-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 65px; width: 220px; margin-right:30px; background-color: #FF607D; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#FF607D; --ripple-duration:0s; border-radius: 13px; --color-pressed: #0000">
+				<n-button class="products-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 65px; width: 220px; margin-right:30px; background-color: #FF607D; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#FF607D; --ripple-duration:0s; border-radius: 13px; --color-pressed: #0000; cursor: pointer" 
+							@click="()=>selectItem(value)">
 					<span class="products-button-text">
-						PRODUTOS ENCONTRADOS
+						PRODUTOS RELACIONADOS
 					</span>
 				</n-button>
 			</div>
@@ -31,8 +32,7 @@
 					</thead>
 					<tbody>
 						<template v-for="(value, index) in results" v-bind:key="index">
-							<tr class="odd-row" data-index=1 style="background-color: white; cursor: pointer" 
-							@click="()=>selectItem(value)">
+							<tr class="odd-row" data-index=1 style="background-color: white">
 								<td class="product-name">
 									<div style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 0px; padding: 1rem">
 										<span class="product-name-text" >
