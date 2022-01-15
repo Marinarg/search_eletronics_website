@@ -16,7 +16,7 @@
 		</div>
 		<div style="width: 100%; display: flex; flex-direction: column; align-items: center; background-color:#eaeaea; margin-top: 2%;">
 			<div class="qtt-products-found" style="font-size: 15px; color:#716c6c; display: flex; flex-direction: row; align-items: center;">
-				<span class="products-text">
+				<span class="products-text" style="margin-right: 60px">
 					{{currentSearch}} - {{Object.keys(results).length}} produtos encontrados
 				</span>
 				<n-button class="products-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 220px; margin-left:60px; background-color: #FF607D; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#FF607D; --ripple-duration:0s; border-radius: 13px; --color-pressed: #0000; cursor: pointer" 
