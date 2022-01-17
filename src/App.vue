@@ -31,8 +31,7 @@ export default {
     }
   },
   beforeMount(){
-    const {params} = this.$route.query;
-    console.log(params);
+    console.log(this);
   },
   methods: {
     async onClick(){
