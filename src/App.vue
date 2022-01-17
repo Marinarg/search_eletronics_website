@@ -30,6 +30,10 @@ export default {
       isLoading: false
     }
   },
+  beforeMount(){
+    const {params} = this.$route.query;
+    console.log(params);
+  },
   methods: {
     async onClick(){
       const baseURI = 'http://3.20.168.53:8000/'
