@@ -7,7 +7,7 @@
       <NInput v-on:keypress.enter="$emit('click')" v-model="search" class="searchTerm" placeholder="Digite sua busca" style="height: 45px; width: 410px; border-radius: 25px; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none" @input="handleInput">
       </NInput>
       <n-button @click="$emit('click')" class="searchButton" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 45px; background-color: #1dbac2; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none">
-        <img src="../assets/magnifying_glass.png" style="height: 40px; width: 40px; margin-left: 15px; --border: none; --border-hover: none">
+        <img src="../assets/magnifying_glass.png" style="height: 40px; width: 40px; margin-left: 15px; --border: none; --border-hover: none; --n-border: none">
       </n-button>
     </div>
   </div>
