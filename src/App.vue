@@ -31,7 +31,11 @@ export default {
     }
   },
   beforeMount(){
-    console.log(this);
+    const {search} = this.$route.query;
+    if(search){
+      this.search = search;
+      this.onClick();
+    }
   },
   methods: {
     async onClick(){

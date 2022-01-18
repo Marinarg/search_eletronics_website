@@ -6,11 +6,12 @@
 					<img src="../assets/logo.png" style="height: 50px; width: 100px">
 				</div>
 				<div class="search" style="display: flex; flex-direction: row; align-items: center; margin-top: 1%; margin-left: 50%">
-					<NInput v-on:keypress.enter="$emit('click')" v-model="search" class="searchTerm" placeholder="Digite uma nova busca" style="height: 40px; width: 700px; border-radius: 25px; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none" @input="handleInput">
+					<NInput v-on:keypress.enter="handleButton" v-model="search" class="searchTerm" placeholder="Digite uma nova busca" style="height: 40px; width: 700px; border-radius: 25px; --border: none; --border-hover: none;--border-pressed: none; --border-focus: none" @input="handleInput">
 					</NInput>
-					<n-button @click="$emit('click')" class="search-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 45px; background-color: #1dbac2; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#1dbac2; --ripple-duration:0s">
+					<n-button @click="handleButton" class="search-button" style="display: flex; flex-direction: row; align-items: center; justify-content: center; height: 45px; width: 45px; background-color: #1dbac2; --border: none; --border-hover: none; --border-pressed: none; --border-focus: none; --ripple-color:#1dbac2; --ripple-duration:0s">
 						<img src="../assets/magnifying_glass.png" style="height: 35px; width: 35px; margin-left: 25px">
 					</n-button>
+					<router-link :to="`/?search=${search}`" style="display: none" ref="routerLink"/>
 				</div>
 			</div>
 		</div>
@@ -99,7 +100,7 @@
 			</div>
 		</div>
 		<n-modal v-model:show="showModal">
-			<analysis-modal-content :results_recommendations="results_recommendations"/>
+			<analysis-modal-content :results_recommendations="results_recommendations" :currentSearch="value"/>
 		</n-modal>
 	</div>
 </template>
@@ -111,7 +112,6 @@ import axios from 'axios'
 
 export default {
 	name: 'Results',
-  
 	props: {
 		value: String,
 		page: String,
@@ -119,25 +119,26 @@ export default {
 		results: undefined,
 		currentSearch: String,
 	},
-  
 	data(){
 	return {
 		search: this.value,
 		selectedItem: null,
 		showModal: false,
 		results_recommendations: null
-	}
-	},
-  
+	}},
 	components: {
 		NButton,
 		NInput,
 		NModal,
 		AnalysisModalContent
 	},
-
 	methods: {
+		handleButton(){
+			window.location.href = `/?search=${this.search}`
+		},
 		handleInput(val){
+			
+			this.search = val;
 			this.$emit('update:value', val)
 		},
 		async selectItem(item){
@@ -145,15 +146,14 @@ export default {
 
 			const baseURI = 'http://3.20.168.53:8000/'
 
-        	const {data} = await axios.get(baseURI + this.search + '/recommendations')
-	        this.results_recommendations = data
+			this.showModal = true
+			const {data} = await axios.get(baseURI + this.value + '/recommendations')
+			this.results_recommendations = data
 			this.selectedItem = item
 
-			this.showModal = true
 			} catch(error){
 				console.error(error)
 			}
-
 		}
 	}
 }
