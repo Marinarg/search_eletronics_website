@@ -21,9 +21,7 @@ const router = createRouter({
 	history: createWebHistory(),
 })
 
-router.beforeEach((to, from, next)=>{
-	next();
-})
+
 
 const app = createApp(root)
 app.use(router)
