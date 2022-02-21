@@ -1,9 +1,25 @@
-# search_eletronics_website
+# Search Eletronics Website
 
-## Project setup
-```
-npm install
-```
+Dedicated repository for storing [ebusca website](http://ebusca.link/) front end. The front end was writen in JavaScript language using Vue framework and has 3 components:
+
+- **AnalysisModalContent**: has the modal that opens when recommendation system is activated;
+- **Home**: has the home page;
+- **Results**: has the results page. 
+
+
+## Installation Instructions
+
+This project currently uses:
+- NPM 6.13.14
+- Vue/cli 4.5.15
+
+1. Run install file:
+- `bash install.sh`
+
+2. Install npm:
+- `npm install`
+
+## Using Locally
 
 ### Compiles and hot-reloads for development
 ```
@@ -19,6 +35,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
